@@ -7,4 +7,5 @@ export default {
   build: {
     outDir: "../dist",
   },
+  base: "/spa-rick-morty/",
 };
