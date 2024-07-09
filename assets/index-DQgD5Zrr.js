@@ -12,13 +12,13 @@
       ${(await l()).results.map(s=>`
           <article class="Character-item">
             <a href="#/${s.id}/">
-            <img src="${s.image}" alt="${s.name}" />
-            <h2>${s.name}</h2>
+              <img src="${s.image}" alt="${s.name}" />
+              <h2>${s.name}</h2>
             </a>
           </article>
           `).join("")}   
     </div>
-  `,d=()=>location.hash.slice(1).toLocaleLowerCase().split("/")[1]||"/",m=async()=>{const r=d(),e=await l(r);return console.log(e),`
+  `,d=()=>location.hash.slice(1).toLocaleLowerCase().split("/")[1]||"/",m=async()=>{const r=d(),e=await l(r);return`
     <div class="Characters-inner">
       <article class="Characters-card">
         <img src="${e.image}" alt="${e.name}" />
@@ -37,4 +37,4 @@
     <div class="Error404">
       <h2>Error 404</h2>
     </div>
-  `,v=r=>r.length<=3?r==="/"?r:"/:id":`/${r}`,i={"/":p,"/:id":m,"/contact":"Contact"},h=async()=>{const r=document.getElementById("header"),e=document.getElementById("content");r.innerHTML=await u();let s=d(),n=await v(s),t=i[n]?i[n]:f;e.innerHTML=await t()};window.addEventListener("load",h);window.addEventListener("hashchange",h);
+  `,v=r=>r.length<=3?r==="/"?r:"/:id":`/${r}`,i={"/":p,"/:id":m,"/contact":"Contact"},h=async()=>{const r=document.getElementById("header"),e=document.getElementById("content");r.innerHTML=u();let s=d(),n=await v(s),t=i[n]?i[n]:f;e.innerHTML=await t()};window.addEventListener("load",h);window.addEventListener("hashchange",h);
