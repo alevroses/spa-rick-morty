@@ -1,5 +1,7 @@
+import { defineConfig } from "vite";
+
 // vite.config.js
-export default {
+export default defineConfig({
   root: "src",
   server: {
     open: true,
@@ -8,4 +10,4 @@ export default {
     outDir: "../dist",
   },
   base: "/spa-rick-morty/",
-};
+});
