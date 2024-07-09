@@ -4,7 +4,6 @@ import { getData } from "../utils/getData";
 const Character = async () => {
   const id = getHash();
   const character = await getData(id);
-  console.log(character);
 
   const view = `
     <div class="Characters-inner">
@@ -28,4 +27,4 @@ const Character = async () => {
 
 export { Character };
 
-// Abajo a en javascript, luego buscar html
+// Abajo en javascript, luego buscar html
